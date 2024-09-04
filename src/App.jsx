@@ -258,7 +258,7 @@ function App() {
     <>
       <div className="header">
         <h1>Regex Crossword Puzzle</h1>
-        <div>
+        <div style={{ textAlign: "center" }}>
           <button
             onClick={() => {
               const bordJSON = JSON.stringify(board);
