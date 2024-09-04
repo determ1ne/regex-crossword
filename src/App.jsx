@@ -13,7 +13,7 @@ const Hex = ({ word, setWordCallback, highlighted }) => {
   const [isActive, setIsActive] = useState(false);
 
   const activeClass = isActive ? "active" : "";
-  const highlightedClass = highlighted ? "highlighted" : "";
+  const highlightedClass = `highlighted-${highlighted}`;
   const wordInInput = isActive ? "" : word;
 
   return (
@@ -32,6 +32,8 @@ const Hex = ({ word, setWordCallback, highlighted }) => {
                 const v = e.target.value.toUpperCase();
                 if (isAlpha(v)) {
                   setWordCallback(v);
+                } else {
+                  setWordCallback(null);
                 }
                 e.target.blur();
               }}
@@ -223,6 +225,7 @@ function App() {
     return board ?? Array.from({ length: 13 }).fill([]);
   });
   const [highLightItem, setHighLightItem] = useState(-1);
+  const [stickHighlight, setStickHighlight] = useState(-1);
 
   const setWordForIndex = (i, j, word) => {
     setBoard((prev) => {
@@ -242,12 +245,21 @@ function App() {
   };
 
   const highlightPath = useMemo(() => {
-    if (highLightItem === -1) return [];
+    if (highLightItem === -1) {
+      if (stickHighlight === -1) return [];
+      return getPath(regexList[stickHighlight]);
+    }
     return getPath(regexList[highLightItem]);
-  }, [highLightItem]);
+  }, [highLightItem, stickHighlight]);
 
   const isHexHighlighted = (i, j) => {
-    return highlightPath.some(([x, y]) => x === i && y === j);
+    for (let index = 0; index < highlightPath.length; index++) {
+      const [x, y] = highlightPath[index];
+      if (x === i && y === j) {
+        return index;
+      }
+    }
+    return -1;
   };
 
   const isHexHighlightedForRow = (i) => {
@@ -400,6 +412,12 @@ function App() {
               className={`regex-item ${
                 highLightItem === i ? "regex-active" : ""
               }`}
+              onClick={() => {
+                setStickHighlight((prev) => {
+                  if (prev === i) return -1;
+                  return i;
+                });
+              }}
               onMouseOver={() => {
                 setHighLightItem(i);
               }}

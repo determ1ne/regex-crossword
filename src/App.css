@@ -61,15 +61,127 @@
 .hex-inner .bottom.active {
   border-top: 30px solid lightgoldenrodyellow;
 }
-.hex-inner .top.highlighted {
+
+.hex-inner .top.highlighted-0 {
+  border-bottom: 30px solid lightskyblue;
+}
+.hex-inner .middle.highlighted-0 {
+  background: lightskyblue;
+}
+.hex-inner .bottom.highlighted-0 {
+  border-top: 30px solid lightskyblue;
+}
+
+.hex-inner .top.highlighted-1 {
   border-bottom: 30px solid lightgreen;
 }
-.hex-inner .middle.highlighted {
+.hex-inner .middle.highlighted-1 {
   background: lightgreen;
 }
-.hex-inner .bottom.highlighted {
+.hex-inner .bottom.highlighted-1 {
   border-top: 30px solid lightgreen;
 }
+
+.hex-inner .top.highlighted-2 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.95);
+}
+.hex-inner .middle.highlighted-2 {
+  background: rgba(144, 238, 144, 0.95);
+}
+.hex-inner .bottom.highlighted-2 {
+  border-top: 30px solid rgba(144, 238, 144, 0.95);
+}
+
+.hex-inner .top.highlighted-3 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.90);
+}
+.hex-inner .middle.highlighted-3 {
+  background: rgba(144, 238, 144, 0.90);
+}
+.hex-inner .bottom.highlighted-3 {
+  border-top: 30px solid rgba(144, 238, 144, 0.90);
+}
+
+.hex-inner .top.highlighted-4 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.85);
+}
+.hex-inner .middle.highlighted-4 {
+  background: rgba(144, 238, 144, 0.85);
+}
+.hex-inner .bottom.highlighted-4 {
+  border-top: 30px solid rgba(144, 238, 144, 0.85);
+}
+
+.hex-inner .top.highlighted-5 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.80);
+}
+.hex-inner .middle.highlighted-5 {
+  background: rgba(144, 238, 144, 0.80);
+}
+.hex-inner .bottom.highlighted-5 {
+  border-top: 30px solid rgba(144, 238, 144, 0.80);
+}
+
+.hex-inner .top.highlighted-6 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.75);
+}
+.hex-inner .middle.highlighted-6 {
+  background: rgba(144, 238, 144, 0.75);
+}
+.hex-inner .bottom.highlighted-6 {
+  border-top: 30px solid rgba(144, 238, 144, 0.75);
+}
+
+.hex-inner .top.highlighted-7 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.70);
+}
+.hex-inner .middle.highlighted-7 {
+  background: rgba(144, 238, 144, 0.70);
+}
+.hex-inner .bottom.highlighted-7 {
+  border-top: 30px solid rgba(144, 238, 144, 0.70);
+}
+
+.hex-inner .top.highlighted-8 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.65);
+}
+.hex-inner .middle.highlighted-8 {
+  background: rgba(144, 238, 144, 0.65);
+}
+.hex-inner .bottom.highlighted-8 {
+  border-top: 30px solid rgba(144, 238, 144, 0.65);
+}
+
+.hex-inner .top.highlighted-9 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.60);
+}
+.hex-inner .middle.highlighted-9 {
+  background: rgba(144, 238, 144, 0.60);
+}
+.hex-inner .bottom.highlighted-9 {
+  border-top: 30px solid rgba(144, 238, 144, 0.60);
+}
+
+.hex-inner .top.highlighted-10 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.55);
+}
+.hex-inner .middle.highlighted-10 {
+  background: rgba(144, 238, 144, 0.55);
+}
+.hex-inner .bottom.highlighted-10 {
+  border-top: 30px solid rgba(144, 238, 144, 0.55);
+}
+
+.hex-inner .top.highlighted-11 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.50);
+}
+.hex-inner .middle.highlighted-11 {
+  background: rgba(144, 238, 144, 0.50);
+}
+.hex-inner .bottom.highlighted-11 {
+  border-top: 30px solid rgba(144, 238, 144, 0.50);
+}
+
 .hex-row {
   clear: left;
   white-space: nowrap;
