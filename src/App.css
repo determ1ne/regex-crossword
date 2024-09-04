@@ -1,5 +1,4 @@
 #root {
-  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   display: flex;
@@ -7,43 +6,6 @@
   align-items: center;
   justify-content: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .hex {
   margin-left: 3px;
   margin-bottom: -26px;
@@ -151,3 +113,24 @@
   border: 1px solid red;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: #fff;
+  }
+  .hex-inner .top {
+    border-bottom: 30px solid #333;
+  }
+  .hex-inner .middle {
+    background: #333;
+  }
+  .hex-inner .bottom {
+    border-top: 30px solid #333;
+  }
+  .regex-content {
+    background: darkblue;
+  }
+  .regex-extracted {
+    background: darkolivegreen;
+  }
+}

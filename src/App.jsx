@@ -62,7 +62,7 @@ const HexRow = ({
     <div
       className="hex-row"
       style={{
-        marginLeft: offset ? `${offset * 53}px` : 0,
+        paddingLeft: offset ? `${offset * 53}px` : 0,
       }}
     >
       {Array.from({ length: itemCount }).map((_, index) => (
@@ -77,7 +77,7 @@ const HexRow = ({
   );
 };
 
-const baseOffset = 4;
+const baseOffset = 6;
 
 const D_JP = 0;
 // const D_JN = 1;
@@ -258,42 +258,44 @@ function App() {
     <>
       <div className="header">
         <h1>Regex Crossword Puzzle</h1>
-        <button
-          onClick={() => {
-            const bordJSON = JSON.stringify(board);
-            prompt("Copy to clipboard: Ctrl+C, Enter", bordJSON);
-          }}
-          style={{ marginRight: "10px" }}
-        >
-          Save
-        </button>
-        <button
-          onClick={() => {
-            const bordJSON = prompt("Paste board JSON here");
-            if (bordJSON) {
-              try {
-                const newBoard = JSON.parse(bordJSON);
-                setBoard(newBoard);
-              } catch {
-                alert("Invalid JSON");
+        <div>
+          <button
+            onClick={() => {
+              const bordJSON = JSON.stringify(board);
+              prompt("Copy to clipboard: Ctrl+C, Enter", bordJSON);
+            }}
+            style={{ marginRight: "10px" }}
+          >
+            Save
+          </button>
+          <button
+            onClick={() => {
+              const bordJSON = prompt("Paste board JSON here");
+              if (bordJSON) {
+                try {
+                  const newBoard = JSON.parse(bordJSON);
+                  setBoard(newBoard);
+                } catch {
+                  alert("Invalid JSON");
+                }
               }
-            }
-          }}
-          style={{ marginRight: "10px" }}
-        >
-          Load
-        </button>
-        <button
-          onClick={() => {
-            setBoard(Array.from({ length: 13 }).fill([]));
-          }}
-          style={{ marginRight: "10px" }}
-        >
-          Clear
-        </button>
-        <button>
-          <a href="https://github.com/determ1ne/regex-crossword">GitHub</a>
-        </button>
+            }}
+            style={{ marginRight: "10px" }}
+          >
+            Load
+          </button>
+          <button
+            onClick={() => {
+              setBoard(Array.from({ length: 13 }).fill([]));
+            }}
+            style={{ marginRight: "10px" }}
+          >
+            Clear
+          </button>
+          <button>
+            <a href="https://github.com/determ1ne/regex-crossword">GitHub</a>
+          </button>
+        </div>
       </div>
       <form className="crossword-container">
         <HexRow
