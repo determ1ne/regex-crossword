@@ -182,6 +182,16 @@
   border-top: 30px solid rgba(144, 238, 144, 0.50);
 }
 
+.hex-inner .top.highlighted-12 {
+  border-bottom: 30px solid rgba(144, 238, 144, 0.45);
+}
+.hex-inner .middle.highlighted-12 {
+  background: rgba(144, 238, 144, 0.45);
+}
+.hex-inner .bottom.highlighted-12 {
+  border-top: 30px solid rgba(144, 238, 144, 0.45);
+}
+
 .hex-row {
   clear: left;
   white-space: nowrap;
@@ -207,22 +217,36 @@
   margin-bottom: 10px;
 }
 .regex-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  column-count: 3;
+  font-size: 25px;
+  font-weight: bold;
 }
 .regex-content {
   background: lightgray;
   font-family:'Courier New', Courier, monospace;
-  font-size: 20px;
-  font-weight: bold;
 }
 .regex-extracted {
-  background: lightcyan;
+  margin-left: 1rem;
+  color: #333;
   font-family:'Courier New', Courier, monospace;
-  font-size: 20px;
 }
 .regex-active {
-  border: 1px solid red;
+  background: rgba(100,220,30,0.4);
+}
+span.regex-input-char:nth-child(5n+1) {
+  background: lightpink;
+}
+span.regex-input-char:nth-child(5n+2) {
+  background: lightskyblue;
+}
+span.regex-input-char:nth-child(5n+3) {
+  background: lightgreen;
+}
+span.regex-input-char:nth-child(5n+4) {
+  background: lightsteelblue;
+}
+span.regex-input-char:nth-child(5n+5) {
+  background: gold;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -241,8 +265,5 @@
   }
   .regex-content {
     background: darkblue;
-  }
-  .regex-extracted {
-    background: darkolivegreen;
   }
 }
